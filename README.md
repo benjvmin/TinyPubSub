@@ -11,7 +11,7 @@ Remove Events:
 Trigger Events:
 `Events.emit(someFunctionToTrigger, someDataToPass)`
 
-Features:
+###Features:
 * Throws an error if you try to Emit a function that does not exist, easier for debugging purposes. 
 
 * Extremely Tiny
