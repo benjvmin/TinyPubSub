@@ -3,7 +3,7 @@
 
 const Events = {
   handlers: {},
-  
+
   add(event, callbackFn) {
     if (!this.handlers[event]) {
       this.handlers[event] = [];
@@ -23,6 +23,7 @@ const Events = {
       console.log('No Matching Functions Exist to remove!');
     }
   },
+  
   emit(name, ...data) {
     let index = 0;
     let length = Object.keys(this.handlers).length;
