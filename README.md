@@ -2,15 +2,15 @@
 A small Publish/Subscribe library for project use! (Still testing);
 
 
-Add Events:
+#### Add Events:
 
 `Events.add("Event Name", someCallbackFunction)`
 
-Remove Events:
+#### Remove Events:
 
 `Events.remove("Event Name", functionToRemove)`
 
-Trigger Events:
+#### Trigger Events:
 
 `Events.emit(someFunctionToTrigger, someDataToPass)`
 
