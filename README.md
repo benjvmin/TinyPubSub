@@ -3,12 +3,15 @@ A small Publish/Subscribe library for project use! (Still testing);
 
 
 Add Events:
+
 `Events.add("Event Name", someCallbackFunction)`
 
 Remove Events:
+
 `Events.remove("Event Name", functionToRemove)`
 
 Trigger Events:
+
 `Events.emit(someFunctionToTrigger, someDataToPass)`
 
 ### Features:
@@ -16,3 +19,4 @@ Trigger Events:
 
 * Extremely Tiny
 
+*  Zero Dependencies
