@@ -14,6 +14,10 @@ A small Publish/Subscribe library for project use! (Still testing);
 
 `Events.emit(someFunctionToTrigger, someDataToPass)`
 
+#### List Events:
+
+`Events.List()`
+
 ### Features:
 * Throws an error if you try to Emit a function that does not exist, easier for debugging purposes. 
 

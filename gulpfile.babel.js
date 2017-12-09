@@ -160,7 +160,6 @@ gulp.task('js', () => {
   gulp
     .src(jsPath.entry)
     .pipe(plumber())
-    .pipe(cached())
     .pipe(sourceMaps.init())
     .pipe(rollup({ plugins: [], format: 'es' }))
     .pipe(gulpbabel())
