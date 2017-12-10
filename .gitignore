@@ -1,2 +1,5 @@
 node_modules/
-dev/
+dev/pug
+dev/sass
+dev/main.js
+prod/
