@@ -3,3 +3,4 @@ dev/pug
 dev/sass
 dev/main.js
 prod/
+package.json
