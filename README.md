@@ -25,7 +25,7 @@ A small Publish/Subscribe library for project use! (Still testing);
 ### Features:
 * Throws an error if you try to Emit a function that does not exist, easier for debugging purposes. 
 
-* Extremely Tiny
+* Extremely Tiny (733 bytes minified!);
 
 *  Zero Dependencies
 
