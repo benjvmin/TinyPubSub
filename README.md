@@ -2,7 +2,7 @@
 A small Publish/Subscribe library for project use! (Still testing);
 
 
-##### Import the Events Object
+#### Import the Events Object
 
 `import { Events } from "./modules/TinyPubSub.js";`
 
