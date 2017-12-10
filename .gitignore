@@ -5,3 +5,4 @@ dev/main.js
 prod/
 package.json
 package-lock.json
+.gitignore

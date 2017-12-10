@@ -12,7 +12,7 @@ export const Events = {
   //All Events will be added to the Handlers object, to see every function added, call Events.list();
   handlers: {},
 
-  //Add Event ---> Accepts Event Name & A callback function
+  //Add Event ---> Accepts Event Name & A callback function as parameters
   add(event, callbackFn) {
     //If the Event does not exist in the handlers object, create it
     if (!this.handlers[event]) {
