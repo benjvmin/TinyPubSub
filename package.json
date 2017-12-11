@@ -1,0 +1,28 @@
+{
+  "name": "tinypubsub",
+  "version": "1.0.0",
+  "description": "A small Publish/Subscribe library for project use! Edit",
+  "main": "TinyPubSub.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjvmin/TinyPubSub.git"
+  },
+  "keywords": [
+    "Tiny",
+    "PubSub",
+    "Publish",
+    "Subscribe",
+    "Pattern"
+  ],
+  "author": "Benjamin Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjvmin/TinyPubSub/issues"
+  },
+  "homepage": "https://github.com/benjvmin/TinyPubSub#readme"
+}
