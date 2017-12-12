@@ -38,7 +38,7 @@ Events.debug.on = true;
 Console.logs all events presently stored.
 
 ```javascript
-Events.list();
+Events.debug.list();
 ```
 
 #### List a Specific Event
@@ -46,7 +46,7 @@ Events.list();
 Console.logs a specific event.
 
 ```javascript
-Events.listEvent("eventName");
+Events.debug.listEvent("eventName");
 ```
 
 ### Features:
