@@ -1,7 +1,7 @@
 # TinyPubSub
 An extremely tiny Publish/Subscribe library with a thoughtful debugging process, perfect for project use! 
 
-##Basic API
+## Basic API
 
 #### Import Events Object
 ```javascript
@@ -34,7 +34,7 @@ Events.debug.on = true;
 ```
 
 
-####List All Events
+#### List All Events
 Console.logs all events presently stored.
 
 ```javascript
