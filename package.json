@@ -4,7 +4,19 @@
   "description": "A small Publish/Subscribe library for project use! Edit",
   "main": "TinyPubSub.js",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-better-rollup": "^2.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

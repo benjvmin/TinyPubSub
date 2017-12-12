@@ -1,31 +1,61 @@
 # TinyPubSub
-A small Publish/Subscribe library for project use! (Still testing);
+An extremely tiny Publish/Subscribe library with a thoughtful debugging process, perfect for project use! 
 
+##Basic API
 
-#### Import the Events Object
-
-`import { Events } from "./modules/TinyPubSub.js";`
+#### Import Events Object
+```javascript
+import { Events } from "./modulesFolder/TinyPubSub.js";
+```
 
 #### Add Events:
 
-`Events.add("Event Name", someCallbackFunction)`
+```javascript
+Events.add("Event Name", someCallbackFunction);
+```
 
 #### Remove Events:
 
-`Events.remove("Event Name", functionToRemove)`
+```javascript
+Events.remove("Event Name", functionToRemove);
+```
 
 #### Trigger Events:
 
-`Events.emit(someFunctionToTrigger, someDataToPass)`
+```javascript
+Events.emit(someFunctionToTrigger, someDataToPass);
+```
 
-#### List Events:
+## Debugging:
 
-`Events.List()`
+#### Turn On / Off
+```javascript
+Events.debug.on = true;
+```
+
+
+####List All Events
+Console.logs all events presently stored.
+
+```javascript
+Events.list();
+```
+
+#### List a Specific Event
+
+Console.logs a specific event.
+
+```javascript
+Events.listEvent("eventName");
+```
 
 ### Features:
-* Throws an error if you try to Emit a function that does not exist, easier for debugging purposes. 
+* Thoughtful Debugging Process / Debug API
 
-* Extremely Tiny (733 bytes minified!);
+* Extremely Tiny (953 bytes minified + uglified!)
 
 *  Zero Dependencies
 
+* Forged from ES6
+
+* Made with love. 
