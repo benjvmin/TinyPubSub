@@ -9,7 +9,7 @@ MIT LICENSE
 */
 
 export const Events = {
-  //All Events will be added to the Handlers object, to see every function added, call Events.list();
+  //All Events will be added to the Handlers object, to see every function added, call Events.debug.list();
   handlers: {},
 
   //Add Event ---> Accepts Event Name & A callback function as parameters
@@ -28,10 +28,10 @@ export const Events = {
       }
       return;
     }
-
     // Add the callback function to the event
     this.handlers[event].push(callbackFn);
   },
+
   // Remove Event ---> Accepts Event Name, and callback function to remove.
   remove(event, fnName) {
     if (this.handlers[event] && this.handlers[event].includes(fnName)) {
@@ -43,6 +43,7 @@ export const Events = {
       }
     }
   },
+
   //Triggers the Event, uses the rest/spread operater to pass an unlimited number of parameters
   emit(name, ...data) {
     //If the emitted Event exists, call each function inside the matching array
@@ -61,7 +62,7 @@ export const Events = {
   },
 
   debug: {
-    //Switch debugging with a boolean value ( On is recommended for easier debugging);
+    //Switch debugging with a boolean value, will output console.warn statements. ( On is recommended for easier debugging);
     on: true,
 
     //List all properties of the Event Handlers object
