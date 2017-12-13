@@ -34,11 +34,11 @@ export const Events = {
 
   // Triggers the Event, uses the rest/spread operater to pass an unlimited number of parameters
   emit (event, ...data) {
-    // If the emitted Event exists, call each function inside the matching array
+    // If the emitted Event exists, call each function ins the matching Set
     if (handlers.has(event)) {
       handlers.get(event).forEach(fn => { fn(...data) })
     } else if (Events.debug.on) {
-        // If no matching event name exists inside the handlers object, a console.warn statement will appear with the emitted event name. (Only if debug is on)
+        // If no matching event name exists in the handlers Map, a console.warn statement will appear with the emitted event name. (Only if debug is on)
         console.warn(
           `Specified Event "${event}" did not fire. Please check spelling of the event, or whether or not it exists in the handlers object.`
         )
@@ -46,13 +46,13 @@ export const Events = {
   },
 
   debug: {
-    // Switch debugging with a boolean value, will output console.warn statements. ( On is recommended for easier debugging);
+    // Switch debugging with a boolean value, will output console.warn statements. ( On is recommended for easier debugging)
     on: true,
 
-    // List all properties of the Event Handlers object
+    // List all properties of the Event Handlers Map
     list () {
-      // Will console.table if it is supported inside your browser
-      console[console.table ? 'table' : 'log'](Events.handlers)
+      // Will console.table if it is supported in your browser
+      console[console.table ? 'table' : 'log'](handlers)
     },
 
     // Use debug.listEvent to find an console.log a specific event.
