@@ -26,7 +26,7 @@ export const Events = {
     const handles = handlers.get(event)
     if (handles) {
       handles.delete(func)
-    } else if (Event.debug.on) {
+    } else if (Events.debug.on) {
       // If you are trying to remove and event that does not exist, it will let you know via console.warn (if debug is active)
       console.warn(`There are no matching functions ${func} to remove`)
     }
@@ -37,13 +37,11 @@ export const Events = {
     // If the emitted Event exists, call each function inside the matching array
     if (handlers.has(event)) {
       handlers.get(event).forEach(fn => { fn(...data) })
-    } else {
-      // If no matching event name exists inside the handlers object, a console.warn statement will appear with the emitted event name. (Only if debug is on)
-      if (Event.debug.on) {
+    } else if (Events.debug.on) {
+        // If no matching event name exists inside the handlers object, a console.warn statement will appear with the emitted event name. (Only if debug is on)
         console.warn(
           `Specified Event "${event}" did not fire. Please check spelling of the event, or whether or not it exists in the handlers object.`
         )
-      }
     }
   },
 
@@ -54,7 +52,7 @@ export const Events = {
     // List all properties of the Event Handlers object
     list () {
       // Will console.table if it is supported inside your browser
-      console[console.table ? 'table' : 'log'](handlers)
+      console[console.table ? 'table' : 'log'](Events.handlers)
     },
 
     // Use debug.listEvent to find an console.log a specific event.
