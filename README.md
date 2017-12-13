@@ -32,7 +32,7 @@ Events.emit(someFunctionToTrigger, someDataToPass);
 ```javascript
 Events.debug.on = true;
 ```
-
+By default debugging is on (and recommended). When interacting with the Basic API provided, TinyPubSub will notify you via console warnings if you try and add, remove, or emit events that don't exist. This helps reduce errors due to the decoupled nature of TinyPubSub, and helps catch spelling errors.
 
 #### List All Events
 Console.logs all events presently stored.
