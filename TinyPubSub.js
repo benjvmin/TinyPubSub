@@ -50,7 +50,7 @@ export const Events = {
     // List all properties of the Event Handlers Map
     list () {
       // Will console.table if it is supported in your browser
-      console[console.table ? 'table' : 'log'](handlers)
+      console[console.table ? 'table' : 'log'](Events.handlers)
     },
 
     // Use debug.listEvent to find an console.log a specific event.
