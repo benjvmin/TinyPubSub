@@ -6,10 +6,11 @@ DO WHATEVA YOU WANT W/ IT HOMIE
 MIT LICENSE
 */
 
-// All Events will be added to the Handlers map, to see every function added, call Events.debug.list()
-const handlers = new Map()
+export (() => {
+ // All Events will be added to the Handlers map, to see every function added, call Events.debug.list()
+ const handlers = new Map()
 
-export const Events = {
+ const Events = {
   handlers,
   // Add Event ---> Accepts Event Name & A callback function as parameters
   add (event, func) {
@@ -65,3 +66,6 @@ export const Events = {
     }
   }
 }
+
+return Events
+})()
