@@ -6,25 +6,22 @@ DO WHATEVA YOU WANT W/ IT HOMIE
 MIT LICENSE
 */
 
-export (() => {
- // All Events will be added to the Handlers map, to see every function added, call Events.debug.list()
- const handlers = new Map()
-
- const Events = {
-  handlers,
+export const Events = {
+  // All Events will be added to the Handlers map, to see every function added, call Events.debug.list()
+  handlers: new Map(),
   // Add Event ---> Accepts Event Name & A callback function as parameters
   add (event, func) {
     // If the handlers do not have the event then create it.
-    if (!handlers.has(event)) {
-      handlers.set(event, new Set())
+    if (!Events.handlers.has(event)) {
+      Events.handlers.set(event, new Set())
     }
     // Add the callback function to the event
-    handlers.get(event).add(func)
+    Events.handlers.get(event).add(func)
   },
 
   // Remove Event ---> Accepts Event Name, and callback function to remove.
   remove (event, func) {
-    const handles = handlers.get(event)
+    const handles = Events.handlers.get(event)
     if (handles) {
       handles.delete(func)
     } else if (Events.debug.on) {
@@ -36,8 +33,8 @@ export (() => {
   // Triggers the Event, uses the rest/spread operater to pass an unlimited number of parameters
   emit (event, ...data) {
     // If the emitted Event exists, call each function ins the matching Set
-    if (handlers.has(event)) {
-      handlers.get(event).forEach(fn => { fn(...data) })
+    if (Events.handlers.has(event)) {
+      Events.handlers.get(event).forEach(fn => { fn(...data) })
     } else if (Events.debug.on) {
         // If no matching event name exists in the handlers Map, a console.warn statement will appear with the emitted event name. (Only if debug is on)
         console.warn(
@@ -58,14 +55,11 @@ export (() => {
 
     // Use debug.listEvent to find an console.log a specific event.
     listEvent (event) {
-      if (handlers.has(event)) {
-        console.log(handlers.get(event))
+      if (Events.handlers.has(event)) {
+        console.log(Events.handlers.get(event))
       } else {
         console.warn(`${event} does not exist inside Events handlers object.`)
       }
     }
   }
 }
-
-return Events
-})()
