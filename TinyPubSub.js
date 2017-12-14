@@ -38,7 +38,7 @@ export const Events = {
     } else if (Events.debug.on) {
         // If no matching event name exists in the handlers Map, a console.warn statement will appear with the emitted event name. (Only if debug is on)
         console.warn(
-          `Specified Event "${event}" did not fire. Please check spelling of the event, or whether or not it exists in the handlers object.`
+          `Specified Event "${event}" did not fire. Please check spelling of the event, or whether or not it exists in the handlers Map.`
         )
     }
   },
@@ -58,7 +58,7 @@ export const Events = {
       if (Events.handlers.has(event)) {
         console.log(Events.handlers.get(event))
       } else {
-        console.warn(`${event} does not exist inside Events handlers object.`)
+        console.warn(`${event} does not exist inside Events handlers Map.`)
       }
     }
   }
